@@ -11,6 +11,7 @@ class Books extends Component {
   state = {
     result: {},
     search: "",
+    
   };
 
   componentDidMount() {
@@ -19,9 +20,11 @@ class Books extends Component {
 
   searchBooks = (query) => {
     API.search(query)
-    // console.log(response)
-      .then((res) => this.setState({ result: res.data }))
-      
+    
+      .then((res) => {
+        console.log(res.data.items[0].volumeInfo.previewLink)
+      this.setState({ result: res.data.items[0].volumeInfo })
+      })
       .catch((err) => console.log(err));
   }
 
@@ -45,15 +48,15 @@ class Books extends Component {
         <Row>
           <Col size="md-8">
             <Card
-              heading={this.state.result.Title || "Search for a Book to Begin"}
+              heading={this.state.result.title || "Search for a Book to Begin"}
             >
-              {this.state.result.Title ? (
+              {this.state.result.title ? (
                 <BookDetail
-                  title={this.state.result.Title}
-                  src={this.state.result.Poster}
-                  director={this.state.result.Director}
-                  genre={this.state.result.Genre}
-                  released={this.state.result.Released}
+                  title={this.state.result.title}
+                  authors={this.state.result.authors}
+                  src={this.state.result.imageLinks.smallThumbnail}
+                  description={this.state.result.description}
+                  link={this.state.result.previewLink}
                 />
               ) : (
                 <h3>No Results to Display</h3>
