@@ -1,7 +1,15 @@
 body {
+    background-image: url("./media/booksonshelf.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: center; */
     background-color: peru;
 }
 
 .card {
     background-color: rgb(155, 167, 132);
+}
+
+.table {
+    background-color: whitesmoke;
 }
