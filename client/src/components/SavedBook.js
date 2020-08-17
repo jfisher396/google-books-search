@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import API from "../utils/API"
 
 export default class SavedBook extends Component {
     state = {
@@ -8,6 +9,13 @@ export default class SavedBook extends Component {
     componentDidMount() {
         axios.get("/api/books")
             .then((response) => this.setState({ books: response.data }));
+    }
+
+    handleButtonClick = (event) => {
+        event.preventDefault();
+        console.log(this.state.books)
+        API.deleteBook()
+            .catch(err => console.log(err))
     }
 
     render() {
@@ -22,7 +30,7 @@ export default class SavedBook extends Component {
                                 <th scope="col">Title</th>
                                 <th scope="col">Author(s)</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Link to Google Books</th>
+                                <th scope="col">View on Google Books Site</th>
                                 <th scope="col">Remove from list</th>
                             </tr>
                         </thead>
@@ -34,8 +42,8 @@ export default class SavedBook extends Component {
                                         <td>{item.title}</td>
                                         <td>{item.authors}</td>
                                         <td>{item.description}</td>
-                                        <td><a href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
-                                        <td><button className="btn btn-primary mt-3">Remove</button></td>
+                                        <td><a className="btn btn-info mt-3" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
+                                        <td><button onClick={this.handleButtonClick} className="btn btn-primary mt-3">Remove</button></td>
                                     </tr>
                                 )
                             })}
