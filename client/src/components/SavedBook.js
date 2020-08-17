@@ -34,7 +34,7 @@ export default class SavedBook extends Component {
                                         <td>{item.title}</td>
                                         <td>{item.author}</td>
                                         <td>{item.description}</td>
-                                        <td><a href={item.link}>Google Books</a></td>
+                                        <td><a href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
                                     </tr>
                                 )
                             })}
