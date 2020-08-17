@@ -30,11 +30,11 @@ export default class SavedBook extends Component {
                             {books.map((item) => {
                                 return (
                                     <tr key={item._id}>
-                                        <td>{item.image}</td>
+                                        <td><img src={item.image} alt={item.title} /></td>
                                         <td>{item.title}</td>
                                         <td>{item.author}</td>
                                         <td>{item.description}</td>
-                                        <td>{item.link}</td>
+                                        <td><a href={item.link}>Google Books</a></td>
                                     </tr>
                                 )
                             })}

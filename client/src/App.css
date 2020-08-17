@@ -15,10 +15,6 @@ body {
     background-color: rgb(155, 167, 132);
 }
 
-.bookDetail {
-    
-}
-
-#author {
-
+a {
+    color: blue;
 }
