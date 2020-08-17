@@ -14,8 +14,7 @@ export default class SavedBook extends Component {
         const { books } = this.state;
         return (
             <>
-                <div className="container">
-                    <h3>Books</h3>
+                <div>
                     <table className="table">
                         <thead>
                             <tr>
@@ -32,7 +31,7 @@ export default class SavedBook extends Component {
                                     <tr key={item._id}>
                                         <td><img src={item.image} alt={item.title} /></td>
                                         <td>{item.title}</td>
-                                        <td>{item.author}</td>
+                                        <td>{item.authors}</td>
                                         <td>{item.description}</td>
                                         <td><a href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
                                     </tr>

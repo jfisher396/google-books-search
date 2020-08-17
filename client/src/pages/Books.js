@@ -46,7 +46,7 @@ class Books extends Component {
     console.log(this.state);
     API.saveBook({
       title: this.state.result.title,
-      authors: this.state.result.authors,
+      authors: this.state.result.authors.join(', '),
       description: this.state.result.description,
       image: this.state.result.imageLinks.smallThumbnail,
       link: this.state.result.previewLink

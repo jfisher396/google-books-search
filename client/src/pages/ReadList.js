@@ -4,7 +4,8 @@ import SavedBook from "../components/SavedBook"
 export default class ReadList extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
+        
         <SavedBook />
       </div>
     )
