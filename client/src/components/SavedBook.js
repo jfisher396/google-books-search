@@ -8,14 +8,14 @@ export default class SavedBook extends Component {
     };
     componentDidMount() {
         axios.get("/api/books")
-            .then((response) => this.setState({ books: response.data }));
+        .then((response) => this.setState({ books: response.data }));
     }
 
-    handleButtonClick = (event) => {
-        event.preventDefault();
-        console.log(this.state.books)
-        API.deleteBook()
-            .catch(err => console.log(err))
+    handleButtonClick = (id) => {
+        API.deleteBook(id)
+        // location.reload()
+        .then(axios.get("/api/books"))
+        .catch(err => console.log(err))
     }
 
     render() {
@@ -43,7 +43,7 @@ export default class SavedBook extends Component {
                                         <td>{item.authors}</td>
                                         <td>{item.description}</td>
                                         <td><a className="btn btn-info mt-3" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
-                                        <td><button onClick={this.handleButtonClick} className="btn btn-primary mt-3">Remove</button></td>
+                                        <td><button onClick={()=>this.handleButtonClick(item._id)} className="btn btn-primary mt-3">Remove</button></td>
                                     </tr>
                                 )
                             })}
