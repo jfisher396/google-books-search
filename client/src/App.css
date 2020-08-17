@@ -4,12 +4,21 @@ body {
     background-attachment: fixed;
     /* background-position: center; */
     background-color: peru;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .card {
     background-color: rgb(155, 167, 132);
 }
-
+    
 .table {
-    background-color: whitesmoke;
+    background-color: rgb(155, 167, 132);
+}
+
+.bookDetail {
+    
+}
+
+#author {
+
 }

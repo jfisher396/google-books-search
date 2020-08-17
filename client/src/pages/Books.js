@@ -15,7 +15,7 @@ class Books extends Component {
   };
 
   componentDidMount() {
-    this.searchBooks("War of the Worlds");
+    this.searchBooks("Johnny Got His Gun");
   }
 
   searchBooks = (query) => {
