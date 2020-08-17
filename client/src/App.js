@@ -16,9 +16,6 @@ function App() {
           <Route exact path="/reading-list">
             <ReadList />
           </Route>
-          <Route>
-            
-          </Route>
         </Switch>
       </div>
     </Router>

@@ -3,33 +3,38 @@ import axios from "axios";
 
 export default class SavedBook extends Component {
     state = {
-        projectors: [],
+        books: [],
     };
     componentDidMount() {
-        axios
-            .get("/api/projectors")
-            .then((response) => this.setState({ projectors: response.data }));
+        axios.get("/api/books")
+            .then((response) => this.setState({ books: response.data }));
     }
 
     render() {
-        const { projectors } = this.state;
+        const { books } = this.state;
         return (
             <>
                 <div className="container">
-                    <h3>Projectors</h3>
+                    <h3>Books</h3>
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">Model</th>
-                                <th scope="col">Quantity Available</th>
+                                <th scope="col">Cover</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Author(s)</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Link to Google Books</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {projectors.map((item) => {
+                            {books.map((item) => {
                                 return (
                                     <tr key={item._id}>
-                                        <td>{item.model}</td>
-                                        <td>{item.quantity}</td>
+                                        <td>{item.image}</td>
+                                        <td>{item.title}</td>
+                                        <td>{item.author}</td>
+                                        <td>{item.description}</td>
+                                        <td>{item.link}</td>
                                     </tr>
                                 )
                             })}

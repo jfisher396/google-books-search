@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import SavedBook from "../components/SavedBook"
 
 export default class ReadList extends Component {
   render() {
     return (
       <div>
-        <h1>This is the reading list</h1>
+        <SavedBook />
       </div>
     )
   }

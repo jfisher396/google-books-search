@@ -15,14 +15,14 @@ class Books extends Component {
   };
 
   componentDidMount() {
-    this.searchBooks("The Hobbit");
+    this.searchBooks("The Great Gatsby");
   }
 
   searchBooks = (query) => {
     API.search(query)
     
       .then((res) => {
-        console.log(res.data.items[0].volumeInfo)
+        // console.log(res.data.items[0].volumeInfo)
       this.setState({ result: res.data.items[0].volumeInfo })
       })
       .catch((err) => console.log(err));
@@ -40,6 +40,18 @@ class Books extends Component {
     event.preventDefault();
     this.searchBooks(this.state.search);
   }
+
+  handleButtonClick = (event) => {
+    event.preventDefault();
+    console.log(this.state);
+    API.saveBook({
+      title: this.state.title,
+      authors: [],
+      description: "",
+      image: "",
+      link: ""
+    })
+  }
   // 
 
   render() {
@@ -47,9 +59,7 @@ class Books extends Component {
       <Container>
         <Row>
           <Col size="md-8">
-            <Card
-              heading={this.state.result.title || "Search for a Book to Begin"}
-            >
+            <Card heading={this.state.result.title || "Search for a Book to Begin"}>
               {this.state.result.title ? (
                 <BookDetail
                   title={this.state.result.title}
@@ -57,7 +67,9 @@ class Books extends Component {
                   src={this.state.result.imageLinks.smallThumbnail}
                   description={this.state.result.description}
                   link={this.state.result.previewLink}
+                  handleButtonClick={this.handleButtonClick}
                 />
+                
               ) : (
                 <h3>No Results to Display</h3>
               )}
