@@ -7,15 +7,18 @@ export default class SavedBook extends Component {
         books: [],
     };
     componentDidMount() {
+        this.bookApi()
+    }
+    bookApi(){
         axios.get("/api/books")
-        .then((response) => this.setState({ books: response.data }));
+            .then((response) => {
+               return this.setState({ books: response.data })});
     }
 
     handleButtonClick = (id) => {
         API.deleteBook(id)
-        // location.reload()
-        .then(axios.get("/api/books"))
-        .catch(err => console.log(err))
+            .then(this.bookApi())
+        
     }
 
     render() {

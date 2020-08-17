@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 
 function BookDetail(props) {
@@ -9,7 +10,7 @@ function BookDetail(props) {
       <p>Description: {props.description}</p>
       <a href={props.link} target="_blank" rel="noopener noreferrer" className="btn btn-success mt-3">View book in Google Books</a>
       <br />
-      <button onClick={props.handleButtonClick} className="btn btn-info mt-3" href="/reading-list">Save book to reading list</button>
+      <a href="/reading-list" onClick={props.handleButtonClick} className="btn btn-info mt-3">Save book to reading list</a>
     </div>
   );
 }

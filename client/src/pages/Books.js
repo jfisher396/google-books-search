@@ -43,7 +43,6 @@ class Books extends Component {
 
   handleButtonClick = (event) => {
     event.preventDefault();
-    console.log(this.state);
     API.saveBook({
       title: this.state.result.title,
       authors: this.state.result.authors.join(', '),
