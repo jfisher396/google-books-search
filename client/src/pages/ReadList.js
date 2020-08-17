@@ -5,7 +5,6 @@ export default class ReadList extends Component {
   render() {
     return (
       <div className="container">
-        
         <SavedBook />
       </div>
     )

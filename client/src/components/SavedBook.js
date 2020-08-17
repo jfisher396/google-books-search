@@ -23,6 +23,7 @@ export default class SavedBook extends Component {
                                 <th scope="col">Author(s)</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Link to Google Books</th>
+                                <th scope="col">Remove from list</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,6 +35,7 @@ export default class SavedBook extends Component {
                                         <td>{item.authors}</td>
                                         <td>{item.description}</td>
                                         <td><a href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
+                                        <td><button className="btn btn-primary mt-3">Remove</button></td>
                                     </tr>
                                 )
                             })}
