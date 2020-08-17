@@ -15,7 +15,7 @@ class Books extends Component {
   };
 
   componentDidMount() {
-    this.searchBooks("The Great Gatsby");
+    this.searchBooks("War of the Worlds");
   }
 
   searchBooks = (query) => {
@@ -51,6 +51,7 @@ class Books extends Component {
       image: this.state.result.imageLinks.smallThumbnail,
       link: this.state.result.previewLink
     })
+    .catch(err => console.log(err));
   }
   // 
 
