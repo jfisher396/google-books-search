@@ -6,7 +6,7 @@ function BookDetail(props) {
       <img alt={props.title} className="img-fluid" src={props.src} style={{ margin: "0 auto" }} />
       <h3>Author(s): {props.authors}</h3>
       <h4>Description: {props.description}</h4>
-      <a href={props.link} target="_blank">Link to book</a>
+      <a href={props.link} target="_blank">Link to book on Google Books</a>
     </div>
   );
 }

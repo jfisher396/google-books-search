@@ -6,4 +6,8 @@ export default {
   search: function (query) {
     return axios.get(BASEURL + query);
   }
+
+  // saveBook: function (bookData) {
+  //   return axios.post("/api/books", bookData);
+  // }
 };
