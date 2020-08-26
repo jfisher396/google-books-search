@@ -11,6 +11,10 @@
   ## Description:
 
   A React.js built portal for searching and saving books found in Google Books.
+  
+  ![GitHub Logo](/media/Screenshot%20(101).png)
+  
+  ![GitHub Logo](/media/Screenshot%20(102).png)
 
   ---
 
