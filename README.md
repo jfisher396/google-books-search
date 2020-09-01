@@ -17,8 +17,8 @@
   ---
 
   ## Table of Contents:
-  *[Installation](#Installation) 
-  *[Usage](#Usage)
+  *[Description](#Description)
+  *[Visuals](#Visuals)
   *[License](#License)
   *[Contributing](#Contribution)
   *[Tests](#Tests) 
