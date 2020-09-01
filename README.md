@@ -1,8 +1,8 @@
 
   
-  # Project Title:
+  ## Project Title:
 
-  Google Books Search
+  # Google Books Search
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
