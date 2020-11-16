@@ -1,8 +1,4 @@
-
-  
-  # Project Title:
-
-  Google Books Search
+ # Google Books Search
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
@@ -11,30 +7,23 @@
   ## Description:
 
   A React.js built portal for searching and saving books found in Google Books.
+  
+  ## Visuals:
+  
+  ![GitHub Logo](/media/Screenshot%20(101).png)
+  
+  ![GitHub Logo](/media/Screenshot%20(102).png)
 
   ---
 
   ## Table of Contents:
-  *[Installation](#Installation) 
-  *[Usage](#Usage)
+  *[Description](#Description)
+  *[Visuals](#Visuals)
   *[License](#License)
   *[Contributing](#Contribution)
   *[Tests](#Tests) 
   *[Questions](#Contact-Information)
 
----
-
-  ## Installation:
-
-  None
-
----
-
-  ## Usage:
-
-  
-
----
 
   ## License
   License used for this project - MIT
