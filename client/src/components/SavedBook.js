@@ -25,14 +25,14 @@ export default class SavedBook extends Component {
         const { books } = this.state;
         return (
             <>
-                <div>
+                <div className="table-div">
                     <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">Cover</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Author(s)</th>
-                                <th scope="col">Description</th>
+                                <th scope="col" className="hide">Title</th>
+                                <th scope="col" className="hide">Author(s)</th>
+                                <th scope="col" className="hide">Description</th>
                                 <th scope="col">View on Google Books Site</th>
                                 <th scope="col">Remove from list</th>
                             </tr>
@@ -43,9 +43,9 @@ export default class SavedBook extends Component {
                                 return (
                                     <tr key={item._id}>
                                         <td><img src={item.image} alt={item.title} /></td>
-                                        <td>{item.title}</td>
-                                        <td>{item.authors}</td>
-                                        <td className="description"><div className="tableData">{item.description}</div></td>
+                                        <td className="hide">{item.title}</td>
+                                        <td className="hide">{item.authors}</td>
+                                        <td className="description hide"><div className="tableData">{item.description}</div></td>
                                         <td><a className="btn btn-info mt-3" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
                                         <td><button onClick={()=>this.handleButtonClick(item._id)} className="btn btn-primary mt-3">Remove</button></td>
                                     </tr>
