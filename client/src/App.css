@@ -7,11 +7,16 @@ body {
 }
 
 .card {
-    background-color: rgb(155, 167, 132);
+    background-color: #fff;
 }
     
 .table {
     background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 th {
