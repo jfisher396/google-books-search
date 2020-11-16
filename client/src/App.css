@@ -11,7 +11,7 @@ body {
 }
     
 .table {
-    background-color: rgb(155, 167, 132);
+    background-color: #fff;
 }
 
 th {
@@ -19,4 +19,11 @@ th {
 }
 a {
     color: blue;
+}
+
+.tableData{
+    max-height: 200px;
+}
+.description {
+    overflow: auto;
 }

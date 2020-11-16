@@ -20,7 +20,6 @@ class Books extends Component {
 
   searchBooks = (query) => {
     API.search(query)
-    
       .then((res) => {
         // console.log(res.data.items[0].volumeInfo)
       this.setState({ result: res.data.items[0].volumeInfo })

@@ -39,12 +39,13 @@ export default class SavedBook extends Component {
                         </thead>
                         <tbody>
                             {books.map((item) => {
+                                console.log(item)
                                 return (
                                     <tr key={item._id}>
                                         <td><img src={item.image} alt={item.title} /></td>
                                         <td>{item.title}</td>
                                         <td>{item.authors}</td>
-                                        <td>{item.description}</td>
+                                        <td className="description"><div className="tableData">{item.description}</div></td>
                                         <td><a className="btn btn-info mt-3" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
                                         <td><button onClick={()=>this.handleButtonClick(item._id)} className="btn btn-primary mt-3">Remove</button></td>
                                     </tr>
