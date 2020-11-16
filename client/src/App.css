@@ -57,6 +57,7 @@ a {
 @media only screen and (max-width: 1000px) {
   .container {
     width: 100%;
+    padding: 0;
   }
   .hide {
       display: none;
@@ -64,5 +65,15 @@ a {
 
   .table {
       max-width: 100%;
+  }
+
+  .td {
+    width: 33%;
+  }
+  
+  .btn-mq {
+    width: 100%;
+    margin-top: 20px;
+    padding: 50px 5px 50px 5px;
   }
 }
