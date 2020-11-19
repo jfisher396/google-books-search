@@ -10,11 +10,12 @@ body {
   width: 100%;
 }
 .container {
-  width: 100%;
+  width: 1024px;
   margin: 10px auto;
 }
 
 .jumbotron {
+  width: 100%;
   display: flex;
   margin-bottom: 0;
 }
@@ -32,7 +33,7 @@ body {
   align-items: center;
   font-size: 60px;
   font-weight: 200;
-  margin-right: 10px;
+  margin-right: auto;
 }
 
 .jumbotron-subheading {
@@ -102,6 +103,17 @@ a {
     width: 100%;
     padding: 0;
   }
+  .jumbotron {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+  .jumbotron-image {
+    width: auto;
+    height: 250px;
+    display: flex;
+    margin: auto;
+}
   .hide {
     display: none;
   }

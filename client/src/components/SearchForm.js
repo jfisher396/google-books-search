@@ -11,7 +11,7 @@ function SearchForm(props) {
           name="search"
           type="text"
           className="form-control book-input"
-          placeholder="Enter a title"
+          placeholder="Enter a book title to search for on Google Books"
           id="search"
         />
 
