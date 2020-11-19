@@ -74,7 +74,7 @@ class Books extends Component {
             handleFormSubmit={this.handleFormSubmit}
           />
         </Card>
-        <JumboTron heading={this.state.result.title || "Search for a Book to Begin"} jumboImage={jumboImage}></JumboTron>
+        <JumboTron heading={this.state.result.title} jumboImage={jumboImage} author={this.state.result.authors}></JumboTron>
         <SearchResults searchResults={searchResults} handleBookSave={this.handleBookSave}/>
       </div>
     );
