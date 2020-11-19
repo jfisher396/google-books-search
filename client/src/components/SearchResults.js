@@ -17,8 +17,9 @@ function SearchResults(props) {
                     </thead>
 
                     <tbody>
+
                         {props.searchResults.map((book) => {
-                        // console.log(book.id)
+                          console.log(book)
                             return (
                             <tr key={book.id}>
                                 <td>
