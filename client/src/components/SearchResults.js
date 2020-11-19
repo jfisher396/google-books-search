@@ -19,7 +19,7 @@ function SearchResults(props) {
                     <tbody>
 
                         {props.searchResults.map((book) => {
-                          console.log(book)
+                        //   console.log(book.volumeInfo.imageLinks.thumbnail)
                             return (
                             <tr key={book.id}>
                                 <td>

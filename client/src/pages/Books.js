@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Card from "../components/Card";
 import SearchForm from "../components/SearchForm";
-import BookDetail from "../components/BookDetail";
 import SearchResults from "../components/SearchResults";
+import JumboTron from "../components/JumboTron";
 
 class Books extends Component {
   state = {
     result: {},
     search: "",
     results: [],
+    image: ""
   };
 
   //Sets the default search upon page load
@@ -25,6 +26,9 @@ class Books extends Component {
         this.setState({ results: res.data.items });
         //sets the first result object to state
         this.setState({ result: res.data.items[0].volumeInfo });
+        
+        this.setState({ image: res.data.items[0].volumeInfo.imageLinks.thumbnail})
+        this.setState({search: ""})
       }).catch((err) => console.log(err));
   };
 
@@ -57,7 +61,9 @@ class Books extends Component {
   render() {
     
     const searchResults = this.state.results;
-    // console.log(searchResults)
+    
+    const jumboImage = this.state.image;
+    
     return (
 
       <div className="container">
@@ -68,20 +74,7 @@ class Books extends Component {
             handleFormSubmit={this.handleFormSubmit}
           />
         </Card>
-        <Card heading={this.state.result.title || "Search for a Book to Begin"}>
-          {this.state.result.title ? (
-            <BookDetail
-              title={this.state.result.title}
-              authors={this.state.result.authors}
-              src={this.state.result.imageLinks.smallThumbnail}
-              description={this.state.result.description}
-              link={this.state.result.previewLink}
-              handleBookSave={this.handleBookSave}
-            />
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Card>
+        <JumboTron heading={this.state.result.title || "Search for a Book to Begin"} jumboImage={jumboImage}></JumboTron>
         <SearchResults searchResults={searchResults} handleBookSave={this.handleBookSave}/>
       </div>
     );

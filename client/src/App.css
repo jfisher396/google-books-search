@@ -13,6 +13,17 @@ body {
   width: 100%;
   margin: 10px auto;
 }
+
+.jumbotron-image {
+  height: 250px;
+  display: inline;
+  margin-right: 50px;
+}
+
+.jumbotron-heading {
+  display: inline;
+  font-size: 70px;
+}
 .card {
   background-color: #fff;
 }
