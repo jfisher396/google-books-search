@@ -33,8 +33,8 @@ export default class SavedBook extends Component {
                                 <th scope="col" className="hide">Title</th>
                                 <th scope="col" className="hide">Author(s)</th>
                                 <th scope="col" className="hide">Description</th>
-                                <th scope="col" className="hide">View on Google Books Site</th>
-                                <th scope="col" className="hide">Remove from list</th>
+                                <th scope="col" className="hide"></th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -46,8 +46,8 @@ export default class SavedBook extends Component {
                                         <td className="hide td">{item.title}</td>
                                         <td className="hide td">{item.authors}</td>
                                         <td className="description hide td"><div className="tableData">{item.description}</div></td>
-                                        <td className="td"><a className="btn btn-info btn-mq" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a></td>
-                                        <td className="td"><button onClick={()=>this.handleButtonClick(item._id)} className="btn btn-primary btn-mq">Remove</button></td>
+                                        <td className="td"><a className="btn btn-info list-button" href={item.link} target="_blank" rel="noopener noreferrer">Google Books</a>
+                                        <button onClick={()=>this.handleButtonClick(item._id)} className="btn btn-primary list-button">Remove</button></td>
                                     </tr>
                                 )
                             })}

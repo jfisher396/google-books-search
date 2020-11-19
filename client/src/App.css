@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("./media/booksonshelf.jpg");
   background-size: cover;
@@ -70,7 +74,7 @@ body {
 }
 
 .table {
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 0px 0px 5px 5px;
   -webkit-border-radius: 0px 0px 5px 5px;
   -moz-border-radius: 0px 0px 5px 5px;
@@ -80,10 +84,6 @@ body {
 
 th {
   font-size: 20px;
-}
-
-a {
-  color: blue;
 }
 
 .book-input {
@@ -119,6 +119,7 @@ a {
 .cover {
   width: 125px;
   height: auto;
+  
 }
 
 @media only screen and (max-width: 1000px) {
@@ -146,12 +147,7 @@ a {
   }
 
   .td {
-    width: 33%;
+    width: 50%;
   }
 
-  .btn-mq {
-    width: 100%;
-    margin-top: 20px;
-    padding: 50px 5px 50px 5px;
-  }
 }

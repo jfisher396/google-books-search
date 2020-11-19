@@ -22,7 +22,7 @@ function SearchResults(props) {
                         //   console.log(book.volumeInfo.imageLinks.thumbnail)
                             return (
                             <tr key={book.id}>
-                                <td>
+                                <td className="td">
                                 <img className="cover" src={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : "http://placekitten.com/125/200"} alt={book.volumeInfo.title}/>
                                 </td>
                                 <td className="hide">{book.volumeInfo.title}</td>
@@ -30,7 +30,7 @@ function SearchResults(props) {
                                 <td className="description hide"><div className="tableData">{book.volumeInfo.description}</div></td>
                                 <td className="hide">{book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate.slice(0, 4) : "N/A"}</td>
                                 <td className="hide">{book.volumeInfo.pageCount}</td>
-                                <td>
+                                <td className="td">
                                     <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer" className="btn btn-success list-button">
                                     View in Google Books
                                     </a>
