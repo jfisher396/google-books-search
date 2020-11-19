@@ -33,9 +33,7 @@ th {
 a {
   color: blue;
 }
-.form-group {
- 
-}
+
 .book-input {
   display: inline-block;
   height: 40px;
@@ -43,8 +41,20 @@ a {
 }
 .search-btn {
   height: 40px;
-  width:25%;
+  width: 25%;
   float: right;
+}
+
+.list-button-div {
+  display: flex;
+  flex-direction: column;
+  height: 225px;
+}
+
+.list-button {
+  padding: 20px 0px 20px 0px;
+  width: 165px;
+  margin: 15px auto;
 }
 .tableData {
   max-height: 200px;
@@ -54,23 +64,28 @@ a {
   overflow: auto;
 }
 
+.cover {
+  width: 125px;
+  height: auto;
+}
+
 @media only screen and (max-width: 1000px) {
   .container {
     width: 100%;
     padding: 0;
   }
   .hide {
-      display: none;
+    display: none;
   }
 
   .table {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .td {
     width: 33%;
   }
-  
+
   .btn-mq {
     width: 100%;
     margin-top: 20px;

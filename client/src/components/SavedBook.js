@@ -39,10 +39,10 @@ export default class SavedBook extends Component {
                         </thead>
                         <tbody>
                             {books.map((item) => {
-                                console.log(item)
+                                // console.log(item)
                                 return (
                                     <tr key={item._id}>
-                                        <td><img src={item.image} alt={item.title} /></td>
+                                        <td><img className="cover" src={item.image} alt={item.title} /></td>
                                         <td className="hide td">{item.title}</td>
                                         <td className="hide td">{item.authors}</td>
                                         <td className="description hide td"><div className="tableData">{item.description}</div></td>
