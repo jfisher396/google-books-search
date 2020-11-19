@@ -67,7 +67,7 @@ class Books extends Component {
     return (
 
       <div className="container">
-        <Card heading="My Reading List">
+        <Card heading="Search for a Book">
           <SearchForm
             value={this.state.search}
             handleInputChange={this.handleInputChange}

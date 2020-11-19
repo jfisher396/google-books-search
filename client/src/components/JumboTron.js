@@ -8,7 +8,7 @@ export default function JumboTron(props) {
            
             <img className="jumbotron-image" alt={props.heading} src={props.jumboImage}></img>
             <h2 className="jumbotron-heading">{props.heading}</h2>
-            <h3 className="jumbotron-subheading">By {props.author}</h3>
+            <p className="jumbotron-subheading">By {props.author}</p>
 
         </div>
     )
