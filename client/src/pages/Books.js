@@ -13,18 +13,21 @@ class Books extends Component {
     image: ""
   };
 
+  
   //Sets the default search upon page load
   componentDidMount() {
-    this.searchBooks("The Hobbit");
+    this.searchBooks("Lord of the Flies");
   }
 
   //a function to run a search of the API based on customer input
   searchBooks = (query) => {
     API.search(query)
       .then((res) => {
+        // console.log(res)
         //sets the array of results to state
         this.setState({ results: res.data.items });
         //sets the first result object to state
+        // console.log(res.data.items[0].volumeInfo)
         this.setState({ result: res.data.items[0].volumeInfo });
         
         this.setState({ image: res.data.items[0].volumeInfo.imageLinks.thumbnail})
