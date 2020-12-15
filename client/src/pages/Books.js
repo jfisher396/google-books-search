@@ -30,8 +30,9 @@ class Books extends Component {
         // console.log(res.data.items[0].volumeInfo)
         this.setState({ result: res.data.items[0].volumeInfo });
         
-        this.setState({ image: res.data.items[0].volumeInfo.imageLinks.thumbnail})
-        this.setState({search: ""})
+        this.setState({ image: res.data.items[0].volumeInfo.imageLinks.thumbnail});
+        this.setState({search: ""});
+        
       }).catch((err) => console.log(err));
   };
 
@@ -57,7 +58,9 @@ class Books extends Component {
       description: book.volumeInfo.description,
       image: book.volumeInfo.imageLinks.smallThumbnail,
       link: book.volumeInfo.infoLink,
-    }).catch((err) => console.log(err));
+    })
+    .then(alert("Book saved to Reading List"))
+    .catch((err) => console.log(err));
   };
   //
 

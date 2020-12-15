@@ -3,22 +3,45 @@ import axios from "axios";
 import API from "../utils/API"
 
 export default class SavedBook extends Component {
+
     state = {
         books: [],
     };
+
+    //renders the books list from the database upon page load
     componentDidMount() {
         this.bookApi()
     }
+
+    //makes a call to the books API
     bookApi(){
         axios.get("/api/books")
             .then((response) => {
+                // console.log(response.data)
                return this.setState({ books: response.data })});
     }
 
+    //updates API info when book has been deleted
+    
+
+    //deletes book from db
     handleButtonClick = (id) => {
         API.deleteBook(id)
-            .then(this.bookApi())
+        .then(this.bookApi())
         
+        
+    }
+
+    componentDidUpdate(prevProps,prevState) {
+        console.log(prevState.books)
+        if(!prevState.books[0]){
+            console.log("prevState clear")
+            // return this.bookApi()
+        } else if(prevState.books[0]) {
+            // this.bookApi();
+            console.log("API ran")
+        }
+
     }
 
     render() {
@@ -57,4 +80,6 @@ export default class SavedBook extends Component {
             </>
         );
     }
+
+    
 }
