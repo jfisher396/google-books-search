@@ -23,7 +23,7 @@ class Books extends Component {
   searchBooks = (query) => {
     API.search(query)
       .then((res) => {
-        // console.log(res)
+        console.log(res)
         //sets the array of results to state
         this.setState({ results: res.data.items });
         //sets the first result object to state
@@ -62,6 +62,8 @@ class Books extends Component {
     .then(alert("Book saved to Reading List"))
     .catch((err) => console.log(err));
   };
+
+  
   //
 
   render() {
@@ -80,8 +82,8 @@ class Books extends Component {
             handleFormSubmit={this.handleFormSubmit}
           />
         </Card>
-        <JumboTron heading={this.state.result.title} jumboImage={jumboImage} author={this.state.result.authors}></JumboTron>
-        <SearchResults searchResults={searchResults} handleBookSave={this.handleBookSave}/>
+        <JumboTron heading={this.state.result.title} jumboImage={jumboImage} author={this.state.result.authors} handleBookSave={this.handleBookSave}></JumboTron>
+        <SearchResults searchResults={searchResults} handleBookSave={this.handleBookSave} />
       </div>
     );
   }
