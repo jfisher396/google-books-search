@@ -10,7 +10,7 @@ export default class ReadList extends Component {
   render() {
     return (
       <div className="container">
-        < Card heading="Saved Books List" />
+        <Card heading="Saved Books List" />
         <SavedBook />
       </div>
     )

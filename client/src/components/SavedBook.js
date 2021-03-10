@@ -32,7 +32,10 @@ export default class SavedBook extends Component {
   //deletes book from db
   handleDeleteBook = (id) => {
     API.deleteBook(id)
-    .then(this.bookApi())
+    
+    const newBooks = this.state.books.filter(book => book._id !== id);
+    this.setState({books: newBooks})
+
     console.log("remove button clicked", this.state.books);
   };
 
