@@ -1,8 +1,16 @@
 # Google Books Search
 
-  A full MERN-stack (Mongo, Express, React, Node) application for searching for books on Google Books and saving them in a database for easy retrieval.
+A full MERN-stack (Mongo, Express, React, Node) application for searching for books on Google Books and saving them in a database for easy retrieval.
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p>
+    <img src="https://img.shields.io/badge/-React-red" />
+    <img src="https://img.shields.io/badge/-CSS-lightgrey" />
+    <img src="https://img.shields.io/badge/-JavaScript-blue" />
+    <img src="https://img.shields.io/badge/-Express-blueviolet" />
+    <img src="https://img.shields.io/badge/Mongo-orange"  />
+    <img src="https://img.shields.io/badge/-Node-green" />
+    <img src="https://img.shields.io/badge/-Axios-yellow" />
+</p>
 
   
 ---
@@ -16,8 +24,7 @@
   2. [Installation](#installation)
   3. [License](#license)
   4. [Contributing](#contributing)
-  5. [Tests](#tests)
-  6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
+  5. [Contact](#contact-information)
 
 ---
   ## About
@@ -52,14 +59,14 @@ THEN the book is removed from the database and the page
 ```
   
 ---
-  ## Visuals:
+## Visuals:
 
-  ![screenshot 1](media/my-books-list1.png)
-  ![screenshot 2](media/my-books-list2.png)
+![screenshot 1](media/my-books-list1.png)
+![screenshot 2](media/my-books-list2.png)
   
 ---
 
-  ## Installation:
+## Installation:
   
 
   To clone the repo:
@@ -68,14 +75,14 @@ THEN the book is removed from the database and the page
   
 ---
 
-  ## License
-  License used for this project - MIT
+## License
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   * For more information on license types, please reference this website
   for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
 
 ---
 
-  ## Contributing:
+## Contributing:
   
   To contribute to this application, create a pull request.
   Here are the steps needed for doing that:
@@ -90,17 +97,10 @@ THEN the book is removed from the database and the page
 
 ---
 
-  ## Tests:
-  None
-
----
-
-  ## Authors and Acknowledgments
-  Built by [James Fisher](https://jfisher396.github.io/james-fisher-web-developer/).
-
----
-
-  ### Contact Information:
-    *GitHub Username: jfisher396
-    *GitHub Email: jfisher396@hotmail.com
+## Contact Information:
+  * GitHub Username: [jfisher396](https://github.com/jfisher396)
+  * GitHub Email: james@james-fisher-web-developer.com
+  * <p>
+    <a href="https://www.linkedin.com/in/jamesfisher-webdev/"><img alt="Linkedin: James Fisher" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" /></a>
+    </p>
   
