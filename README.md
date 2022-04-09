@@ -27,13 +27,13 @@ A full MERN-stack (Mongo, Express, React, Node) application for searching for bo
   5. [Contact](#contact-information)
 
 ---
-  ## About
+## About
 
   Users can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database. Renders all books saved to the Mongo database to the page. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database. 
 
 ---
 
-  ### User Story
+## User Story
   
   
 ```
@@ -44,7 +44,7 @@ SO THAT I can save them to a database for viewing later
 
 ---
 
-  ### Acceptance Criteria
+## Acceptance Criteria
   
 ```md
 GIVEN an application that accepts user input
@@ -62,6 +62,7 @@ THEN the book is removed from the database and the page
 ## Visuals:
 
 ![screenshot 1](media/my-books-list1.png)
+---
 ![screenshot 2](media/my-books-list2.png)
   
 ---
